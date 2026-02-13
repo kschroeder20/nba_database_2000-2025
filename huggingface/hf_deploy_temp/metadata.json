@@ -1,0 +1,30 @@
+{
+    "title": "NBA Database (2000-2025)",
+    "description": "NBA stats scraped from Basketball Reference covering the 1999-2000 through 2024-25 seasons.",
+    "databases": {
+        "nba": {
+            "tables": {
+                "players": {
+                    "description": "Player biographical info: name, height, weight, position, draft details.",
+                    "facets": ["shoots", "draft_round", "draft_year"]
+                },
+                "teams": {
+                    "description": "Team identifiers with conference and division.",
+                    "facets": ["conference", "division"]
+                },
+                "player_season_stats": {
+                    "description": "Per-game and advanced stats for each player-season. Includes points, rebounds, assists, PER, true shooting %, win shares, BPM, VORP.",
+                    "facets": ["season", "team_id"]
+                },
+                "team_season_stats": {
+                    "description": "Team record and ratings by season: wins, losses, pace, offensive/defensive rating, SRS.",
+                    "facets": ["season", "team_id"]
+                },
+                "games": {
+                    "description": "Individual game results with date, teams, scores, and home/away winner.",
+                    "facets": ["season", "home_team", "away_team"]
+                }
+            }
+        }
+    }
+}
